@@ -1,0 +1,106 @@
+body{
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #000;
+	display: flex;
+}
+.pitanje{
+	/* prikaz teksta pitanja */
+	font-weight: 600;
+}
+.odgovori {
+	/* div gdje se nalaze svi odgovori */
+  margin-bottom: 20px;
+}
+.odgovori label{
+	/* labela u kojoj se nalazi input i tekst ponudjenog odgovora */
+  display: block;
+}
+#kviz{
+	/* div u kome se nalaze pitanja i ponudjeni odgovori */
+	margin: 30px;
+}
+#rezultat{
+	/* div u kome se nalazi ucinak igraca na kraju igre */
+	margin: 30px;
+	margin-bottom: 100%;
+	/* justify-self: flex-start; */
+	align-self: center;
+}
+#zavrsi{
+	/* dugme za kraj igre */
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 10px;
+	cursor: pointer;
+	margin: 20px;
+	position: fixed;
+	bottom: 10px;
+	right: 15px;
+	width: 28%;
+}
+#zavrsi:hover{
+	background-color: #38a;
+}
+
+
+
+
+.tacno {
+	color: green;
+}
+
+.netacno {
+	color: red;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin: 20px;
+	width: 28%;
+}
+
+#kviz {
+	width: 70%;
+	border: 1px solid #000;
+	padding: 15px;
+}
+
+
+/* Dark mode */
+
+.body {
+	color: #fff;
+	background-color: rgb(22, 26, 27);
+}
+
+.kvizz {
+	background-color: rgb(41, 51, 54);
+	border: 1px solid #fff !important;
+}
+
+#darkMode {
+	position: absolute;
+	top: 4%;
+	right: 22%;
+	width: 140px;
+	height: 70px;
+	/* padding: 20px 40px; */
+	border-radius: 24px;
+	border: 1px solid #279;
+	background-color: #ccc;
+	font-size: 15px;
+}
+
+
+#darkMode:hover {
+	background-color: #279;
+	color: #fff;
+}
