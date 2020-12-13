@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', serif, sans-serif;
+}
+
+.container {
+    width: 90%;
+    min-height: 80%;
+    margin: 5% 5%;
+    padding: 2% 10%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+.opis {
+    font-size: 1.4em;
+    color: rgb(170, 166, 166);
+}
+
+.searchParam, .results {
+    width: 100%;
+    margin: 3% 0;
+}
+
+input {
+    padding: 10px;
+    margin: 0 1%;
+}
+
+input, select {
+    border: 1px solid #ccc;
+
+}
+
+input:focus, select:focus {
+    border: 1px solid rgb(53, 103, 211)
+}
+
+select, #pretraga {
+    cursor: pointer;
+}
+
+select {
+    padding: 8px;
+    width: 20%;
+    background-color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('./img/arrow.jpg') no-repeat right;
+    background-position-x: calc(100% - 10px) ;
+}
+
+#naslov {
+    width: 30%;
+}
+
+#pretraga {
+    border: 1px solid #24a0ed;
+    background-color: #24a0ed;
+    padding: 10px;
+    width: 15%;
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+
+#pretraga:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+#godina {
+    width: 20%;
+}
+
+
+.results {
+    display: flex;
+    margin: 5% 6%;
+}
+
+.results img {
+    width: 44%;
+    height: auto;
+}
+
+.results .info {
+    width: 70%;
+    display: flex;
+}
+
+table {
+    width: 100%;
+    margin-left: 5px;
+    table-layout: fixed;
+}
+
+table td {
+    text-align: start;
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: unset;
+    white-space: nowrap;
+}
+
+.skriveno {
+    display: none;
+}
+
+#greska {
+    font-size: 3em;
+    color: red;
+}
+
+/* Responzivnost */
+
+@media screen and (max-width: 1300px) {
+    .container {
+        width: 98%;
+        margin: 5% 1%;
+        padding: 2%;
+    }
+}
+
+
+@media screen and (max-width: 730px) {
+    .opis {
+        font-size: 1.2em;
+    }
+
+    #pretraga {
+        width: 20%;
+    }
+
+    .results img {
+        width: 88%;
+        height: auto;
+    }
+
+    .results .info {
+        width: 88%;
+        margin-top: 10px;
+    }
+
+    .results {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    #pretraga {
+        display: block;
+        width: 82%;
+        margin: 2% 9%;
+    }
+
+    select {
+        width: 28%;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    .opis {
+        font-size: 1em;
+    }
+
+    input, select {
+        font-size: 12px;
+    }
+}
