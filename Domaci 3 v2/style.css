@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', serif, sans-serif;
+}
+
+.container {
+    width: 90%;
+    min-height: 80%;
+    margin: 5% 5%;
+    padding: 2% 10%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+.opis {
+    font-size: 1.4em;
+    color: rgb(170, 166, 166);
+}
+
+.searchParam, .results {
+    width: 100%;
+    margin: 3% 0;
+}
+
+input {
+    padding: 10px;
+    margin: 0 1%;
+}
+
+input, select {
+    border: 1px solid #ccc;
+
+}
+
+input:focus, select:focus {
+    border: 1px solid rgb(53, 103, 211)
+}
+
+select, #pretraga {
+    cursor: pointer;
+}
+
+select {
+    padding: 8px;
+    width: 20%;
+    background-color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('./img/arrow.jpg') no-repeat right;
+    background-position-x: calc(100% - 10px) ;
+}
+
+#naslov {
+    width: 30%;
+}
+
+#pretraga {
+    border: 1px solid #24a0ed;
+    background-color: #24a0ed;
+    padding: 10px;
+    width: 15%;
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+
+#pretraga:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+#godina {
+    width: 20%;
+}
+
+
+.results {
+    display: flex;
+    margin: 5% 6%;
+}
+
+.results img {
+    width: 44%;
+    height: auto;
+}
+
+.results .info {
+    width: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 45%;
+}
+
+table {
+    width: 100%;
+    margin-left: 5px;
+    /* table-layout: fixed; */
+}
+
+#mainTable {
+    width: 89%;
+    table-layout: fixed;
+}
+
+#mainTbody td {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    border-left: 0;
+    border-spacing: 0;
+}
+
+#mainTbody tr td:first-child {
+    border-left: 1px solid #ccc;
+}
+
+#mainTbody tr td:last-child {
+    width: 30px;
+    text-align: center;
+    padding: 0;
+    /* vertical-align: middle; */
+}
+
+#mainTbody tr td:nth-child(2) {
+    width: 150px;
+    text-align: center;
+}
+
+.fa-plus {
+    color: #00688b;
+    font-size: 1.5em;
+}
+
+.fa-minus {
+    color: #ff2400;
+    font-size: 1.5em;
+}
+
+#mainTbody tr:nth-last-child(2) td {
+    border-bottom: 1px solid #ccc;
+}
+
+table td {
+    text-align: start;
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: unset;
+    white-space: nowrap;
+}
+
+.skriveno {
+    display: none;
+}
+
+#greska {
+    font-size: 3em;
+    color: red;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.innerTable tr td {
+    border: 0 !important;
+    text-align: left !important;
+    /* display: inline-block; */
+}
+
+.innerINFO {
+    position: relative;
+    text-align: left !important;
+}
+
+
+.brStranice {
+    display: inline-block;
+}
+
+.brStranice a:hover:not(.active) {
+    background-color: #ccc;
+}
+
+.brStranice a {
+    text-decoration: 0;
+    color: #000;
+    padding: 7px 14px;
+    cursor: pointer;
+}
+
+.brStranice a.active {
+    background-color: #23527c;
+    color: #fff;
+}
+
+/* Responzivnost */
+
+@media screen and (max-width: 1300px) {
+    .container {
+        width: 98%;
+        margin: 5% 1%;
+        padding: 2%;
+    }
+}
+
+
+@media screen and (max-width: 730px) {
+    .opis {
+        font-size: 1.2em;
+    }
+
+    #pretraga {
+        width: 20%;
+    }
+
+    .results img {
+        width: 88%;
+        height: auto;
+        display: block;
+        margin: 2px auto;
+    }
+
+    .results .info {
+        width: 100%;
+        margin-top: 10px;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+    .results {
+        flex-direction: column;
+    }
+
+    #mainTbody tr td:nth-child(1) {
+        width: 100%;
+    }
+
+    #mainTbody tr td:nth-child(2), #mainTbody tr td:nth-child(3) {
+        display: none;
+    }
+
+    .innerINFO {
+        width: 100%;
+    }
+
+    #mainTbody .innerINFO tr td {
+        display: inline-block;
+    }
+
+    #mainTbody .innerINFO tr td:first-child {
+        width: 170px;
+    }
+
+}
+
+@media screen and (max-width: 530px) {
+    #pretraga {
+        display: block;
+        width: 82%;
+        margin: 2% 9%;
+    }
+
+    select {
+        width: 28%;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    .opis {
+        font-size: 1em;
+    }
+
+    input, select {
+        font-size: 12px;
+    }
+}
